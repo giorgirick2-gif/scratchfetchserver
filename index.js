@@ -23,10 +23,10 @@ app.get('/fetch/profilepic/:userId', async (req, res) => {
 });
 
 // Route for Project Pictures: /fetch/projectpic/[ID]_282x210.png
-// This captures everything after /fetch/projectpic/ as the parameter
-app.get('/fetch/projectpic/:filename', async (req, res) => {
-    const filename = req.params.filename;
-    const url = `https://uploads.scratch.mit.edu/get_image/project/${filename}`;
+app.get('/fetch/projectpic/:projectId', async (req, res) => {
+    const projectId = req.params.projectId;
+    // This perfectly matches your intended target URL
+    const url = `https://uploads.scratch.mit.edu/get_image/project/${projectId}_282x210.png`;
 
     try {
         const response = await fetch(url);
