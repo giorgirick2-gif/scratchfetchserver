@@ -1,2 +1,2 @@
 # scratchfetchserver
-Fetches Scratches profile pics.
+Fetches Scratches profile and project pics.
